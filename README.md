@@ -1,7 +1,7 @@
 # appodeal-xamarin-demo
 
 1) Install Xamarin https://www.xamarin.com/   
-2) Download https://bitbucket.org/appodeal/appodeal-xamarin-binding   
+2) Download https://github.com/appodeal/appodeal-xamarin-binding   
 3) Right-click on solution and select "Add Existing Project"   
 Add AppodealBinding.csproj to demo project   
 4) Download Appodeal SDK (framework and resources) https://github.com/appodeal/appodeal-ios-demo/wiki/Getting-Started   
