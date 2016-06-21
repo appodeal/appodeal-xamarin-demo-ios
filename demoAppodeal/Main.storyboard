@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="1" green="0.96078431372549022" blue="0.58039215686274515" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="65" y="358" width="46" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.56862745098039214" green="0.95686274509803926" blue="1" alpha="1"/>
+                                <state key="normal" title="Banner">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="164" width="90" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="177" y="240" width="46" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.56862745098039214" green="0.95686274509803926" blue="1" alpha="1"/>
+                                <state key="normal" title="Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="240" width="90" height="30"/>
+                                </variation>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="13" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" opaque="NO">
+                                <rect key="frame" x="177" y="285" width="46" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.56862745098039214" green="0.95686274509803926" blue="1" alpha="1"/>
+                                <state key="normal" title="Native">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="278" width="90" height="30"/>
+                                </variation>
+                                <rect key="contentStretch" x="0" y="0.0" width="1" height="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="17" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="177" y="202" width="46" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.56862745098039214" green="0.95686274509803926" blue="1" alpha="1"/>
+                                <state key="normal" title="Interstitial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="202" width="90" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6"/>
+                                <exclude reference="12"/>
+                                <exclude reference="13"/>
+                                <exclude reference="17"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6"/>
+                                <include reference="12"/>
+                                <include reference="13"/>
+                                <include reference="17"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="BannerButton" destination="6" id="name-outlet-6"/>
+                        <outlet property="VideoButton" destination="12" id="name-outlet-12"/>
+                        <outlet property="LoadButton" destination="13" id="name-outlet-13"/>
+                        <outlet property="InterstitialButton" destination="17" id="name-outlet-17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MPCloseBtn.png" width="32" height="32"/>
+        <image name="MPCloseButtonX.png" width="40" height="40"/>
+        <image name="MPDAAIcon.png" width="20" height="20"/>
+        <image name="MPMutedBtn.png" width="15" height="14"/>
+        <image name="MPPlayBtn.png" width="48" height="48"/>
+        <image name="MPUnmutedBtn.png" width="15" height="14"/>
+        <image name="appodeal_adbadge.png" width="19" height="14"/>
+        <image name="appodeal_daa_icon.png" width="120" height="128"/>
+        <image name="appodeal_pattern.png" width="100" height="100"/>
+        <image name="SVProgressHUD.bundle/angle-mask.png" width="100" height="100"/>
+        <image name="SVProgressHUD.bundle/error.png" width="28" height="28"/>
+        <image name="SVProgressHUD.bundle/info.png" width="27" height="28"/>
+        <image name="SVProgressHUD.bundle/success.png" width="28" height="28"/>
+        <image name="UnityAds.bundle/audio_mute.png" width="32" height="32"/>
+        <image name="UnityAds.bundle/audio_on.png" width="32" height="32"/>
+    </resources>
+</document>
