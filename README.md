@@ -8,6 +8,6 @@ https://github.com/appodeal/appodeal-xamarin-demo-ios/releases
 [![](https://s3.amazonaws.com/appodeal-xamarin/docs/xamarin_settings.jpg)]()   
 
 Updates   
-  7.10.2016:
+  7.10.2016:   
   - SDK IOS 1.3.0   
   - If you are using Visual Studio as IDE, the steps are the same, you just need to download AppodealBinding.dll and edit the References. The source code in C# is the same in the ViewController.cs
