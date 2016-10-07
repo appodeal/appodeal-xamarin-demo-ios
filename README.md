@@ -1,9 +1,9 @@
 # appodeal-xamarin-demo
 
 1) Install Xamarin https://www.xamarin.com/   
-2) Select main project, then in the main menu choose "Project -> Edit References" and add AppodealBinding.dll   
+2) Select the main project, then in the main menu choose "Project -> Edit References" and add the AppodealBinding.dll   
 https://github.com/appodeal/appodeal-xamarin-demo-ios/releases   
-3) Right-click on the Resources folder of demoAppodeal project and select "Add files from folder". Add Resources from Appodeal SDK   
+3) Right-click on the Resources folder of demoAppodeal project and select "Add files from folder". Add the Resources from Appodeal SDK   
 4) Set these settings, then build and run demo project   
 [![](https://s3.amazonaws.com/appodeal-xamarin/docs/xamarin_settings.jpg)]()   
 
