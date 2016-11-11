@@ -20,12 +20,13 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchUseSGen>true</MtouchUseSGen>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>-registrar:static</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -36,10 +37,14 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchFloat32>false</MtouchFloat32>
     <MtouchUseSGen>true</MtouchUseSGen>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>Full</MtouchLink>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>--registrar:static</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -49,10 +54,14 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseSGen>true</MtouchUseSGen>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>-registrar:static</MtouchExtraArgs>
+    <MtouchUseLlvm>false</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,9 +86,13 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="AppodealBinding">
+      <HintPath>..\..\..\Documents\Projects\Appodeal\plugins\appodeal-xamarin-binding\AppodealBinding\bin\Release\AppodealBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Resources\MPAdBrowserController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -96,5 +109,94 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\MPCloseBtn.png" />
+    <BundleResource Include="Resources\MPCloseBtn%402x.png" />
+    <BundleResource Include="Resources\MPCloseBtn%403x.png" />
+    <BundleResource Include="Resources\MPCloseButtonX.png" />
+    <BundleResource Include="Resources\MPCloseButtonX%402x.png" />
+    <BundleResource Include="Resources\MPCloseButtonX%403x.png" />
+    <BundleResource Include="Resources\MPDAAIcon.png" />
+    <BundleResource Include="Resources\MPDAAIcon%402x.png" />
+    <BundleResource Include="Resources\MPDAAIcon%403x.png" />
+    <BundleResource Include="Resources\MPMutedBtn.png" />
+    <BundleResource Include="Resources\MPMutedBtn%402x.png" />
+    <BundleResource Include="Resources\MPMutedBtn%403x.png" />
+    <BundleResource Include="Resources\MPPlayBtn.png" />
+    <BundleResource Include="Resources\MPPlayBtn%402x.png" />
+    <BundleResource Include="Resources\MPPlayBtn%403x.png" />
+    <BundleResource Include="Resources\MPUnmutedBtn.png" />
+    <BundleResource Include="Resources\MPUnmutedBtn%402x.png" />
+    <BundleResource Include="Resources\MPUnmutedBtn%403x.png" />
+    <BundleResource Include="Resources\__vungle.db" />
+    <BundleResource Include="Resources\vg_close.png" />
+    <BundleResource Include="Resources\vg_cta.png" />
+    <BundleResource Include="Resources\vg_mute_off.png" />
+    <BundleResource Include="Resources\vg_mute_on.png" />
+    <BundleResource Include="Resources\vg_privacy.png" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd-report-btn-cut.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd-report-btn.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd_background.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd_background_mrec.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd_close.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd_close_fill.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\apd_star.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\appodeal_adbadge.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\appodeal_mute_off.png" />
+    <BundleResource Include="Resources\Appodeal.bundle\appodeal_mute_on.png" />
+    <BundleResource Include="Resources\Appodeal.bundle\appodeal_pattern.tiff" />
+    <BundleResource Include="Resources\Appodeal.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Appodeal.bundle\es.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Appodeal.bundle\fr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Appodeal.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Appodeal.bundle\uk.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Appodeal.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\MRAID.bundle\mraid.js" />
+    <BundleResource Include="Resources\StartApp.bundle\Info.plist" />
+    <BundleResource Include="Resources\StartApp.bundle\arrow%402x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\arrow_dark%402x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\browser_icon%402x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\close%402x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\info_I.png" />
+    <BundleResource Include="Resources\StartApp.bundle\info_I%402x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\info_I%403x.png" />
+    <BundleResource Include="Resources\StartApp.bundle\loading.html" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\1.sql" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\2.sql" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\3.sql" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\Info.plist" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\MRAIDWebBrowserViewController.nib" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\MRAID_Standard_HTML_Stub.html" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\MRAID_Standard_JS_Stub.html" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\TJCLoadingView.nib" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\TJCclose_button.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\TJCclose_button%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\WebViewJavascriptBridge.js.txt" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\addressbar-background.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\addressbar-background%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\back-disabled.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\back-disabled%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\back.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\back%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\close.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\close%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\forward-disabled.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\forward-disabled%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\forward.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\forward%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\mraid.js.txt" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\openbrowser.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\openbrowser%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\refresh.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\refresh%402x.png" />
+    <BundleResource Include="Resources\TapjoyResources.bundle\revision.txt" />
+    <BundleResource Include="Resources\UnityAds.bundle\Info.plist" />
+    <BundleResource Include="Resources\UnityAds.bundle\audio_mute.png" />
+    <BundleResource Include="Resources\UnityAds.bundle\audio_mute%402x.png" />
+    <BundleResource Include="Resources\UnityAds.bundle\audio_on.png" />
+    <BundleResource Include="Resources\UnityAds.bundle\audio_on%402x.png" />
+    <BundleResource Include="Resources\UnityAds.bundle\en.lproj\InfoPlist.strings" />
   </ItemGroup>
 </Project>
